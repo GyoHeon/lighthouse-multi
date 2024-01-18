@@ -1,3 +1,4 @@
+import { Layout } from "@/components/layout";
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={noto.className}>{children}</body>
+      <body className={noto.className}>
+        <Layout.Header />
+        {children}
+        <Layout.Footer />
+      </body>
     </html>
   );
 }
