@@ -1,4 +1,19 @@
-export const MENU = [
+export const HEADER_MENU = [
+  {
+    title: "Analysis",
+    url: "/analysis",
+  },
+  {
+    title: "Result",
+    url: "/result",
+  },
+  {
+    title: "Upload",
+    url: "/Upload",
+  },
+];
+
+export const MAIN_MENU = [
   {
     url: "https://github.com/GyoHeon/lighthouse-multi",
     title: "How to use",

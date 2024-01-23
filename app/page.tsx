@@ -1,5 +1,5 @@
 import { Card } from "@/components/card";
-import { MENU } from "@/constants/menu";
+import { MAIN_MENU } from "@/constants/menu";
 import Image from "next/image";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <h1>Lighthouse Multi</h1>
 
       <div className="mb-32 flex flex-col gap-3 justify-evenly text-center lg:flex-row lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
-        {MENU.map((item) => (
+        {MAIN_MENU.map((item) => (
           <Card.Menu key={item.title} {...item} />
         ))}
       </div>
