@@ -1,7 +1,7 @@
 export const HEADER_MENU = [
   {
-    title: "Analysis",
-    url: "/analysis",
+    title: "Analytics",
+    url: "/analytics",
   },
   {
     title: "Result",
@@ -9,7 +9,7 @@ export const HEADER_MENU = [
   },
   {
     title: "Upload",
-    url: "/Upload",
+    url: "/upload",
   },
 ];
 

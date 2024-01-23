@@ -7,7 +7,7 @@ const noto = Noto_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Light house multiple",
-  description: "Now, you can analysis multiple web vitals!",
+  description: "Now, you can analytics multiple web vitals!",
 };
 
 export default function RootLayout({
