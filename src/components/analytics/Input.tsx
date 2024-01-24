@@ -1,21 +1,22 @@
+import { storeUrl } from "@/store/url";
 import { useState } from "react";
 
 export const Input = () => {
   const [text, setText] = useState("");
-  const [textList, setTextList] = useState<string[]>([]);
+  const { urlList, setUrlList } = storeUrl();
 
   const addText = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!text) return;
 
-    setTextList([...textList, text]);
+    setUrlList([...urlList, text]);
     setText("");
   };
 
   const deleteText = (index: number) => {
-    const newList = textList.filter((_, i) => i !== index);
+    const newList = urlList.filter((_, i) => i !== index);
 
-    setTextList(newList);
+    setUrlList(newList);
   };
 
   const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +30,7 @@ export const Input = () => {
       </form>
 
       <ul>
-        {textList.map((item, index) => (
+        {urlList.map((item, index) => (
           <li key={index} className="flex gap-2">
             {item}
             <button className="" onClick={() => deleteText(index)}>
