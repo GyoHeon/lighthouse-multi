@@ -27,14 +27,17 @@ export const Input = () => {
 
   return (
     <div className="w-1/2">
-      <form onSubmit={addText} className="flex gap-4 mb-6">
+      <form
+        onSubmit={addText}
+        className="flex gap-4 mb-6 border border-blue-400 rounded-md"
+      >
         <input
           value={text}
           onChange={handleText}
           placeholder="Enter url!"
-          className="border border-blue-400 rounded-md p-2 w-full"
+          className="w-full p-2 rounded-md"
         />
-        <button className="bg-slate-400">Add</button>
+        <button className="m-2 px-3 border-l">Add</button>
       </form>
 
       <ul className="flex flex-col gap-2">
@@ -44,7 +47,7 @@ export const Input = () => {
             className="flex justify-between border border-slate-700 rounded-md p-2"
           >
             {item}
-            <button className="" onClick={() => deleteText(index)}>
+            <button onClick={() => deleteText(index)} className="pl-2 border-l">
               Delete
             </button>
           </li>
