@@ -17,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={noto.className}>
+      <body
+        className={
+          noto.className + " flex flex-col justify-between min-h-screen"
+        }
+      >
         <Layout.Header />
         {children}
         <Layout.Footer />

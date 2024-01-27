@@ -1,11 +1,10 @@
 import { Analytics } from "@/components/analytics";
-import { Card } from "@/components/card";
-import { MAIN_MENU } from "@/constants/menu";
+import { Menu } from "@/components/menu";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex-1 flex flex-col items-center justify-between h-full p-24">
       <Image
         className="relative"
         src="/light.png"
@@ -18,11 +17,7 @@ export default function Home() {
 
       <Analytics.Input />
 
-      <div className="mb-32 flex flex-col gap-3 justify-evenly text-center lg:flex-row lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
-        {MAIN_MENU.map((item) => (
-          <Card.Menu key={item.title} {...item} />
-        ))}
-      </div>
+      <Menu.Main />
     </main>
   );
 }
