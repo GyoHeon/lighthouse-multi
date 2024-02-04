@@ -1,7 +1,9 @@
+"use client";
+
 import { storeUrl } from "@/store/url";
 
 export const List = () => {
-  const { urlList, addUrl, deleteUrl } = storeUrl();
+  const { urlList, deleteUrl } = storeUrl();
 
   const deleteText = (id: string) => {
     deleteUrl(id);
