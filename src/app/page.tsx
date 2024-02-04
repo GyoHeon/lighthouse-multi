@@ -1,4 +1,4 @@
-import { Analytics } from "@/components/analytics";
+import { Main } from "@/components/main";
 import { Menu } from "@/components/menu";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ export default function Home() {
       />
       <h1>Lighthouse Multi</h1>
 
-      <Analytics.Input />
+      <Main.Input />
 
       <Menu.Main />
     </main>
